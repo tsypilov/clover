@@ -1,0 +1,24 @@
+@import "src/globals/styles/colors";
+
+.root {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 230px;
+  height: 50px;
+  background: $whiteColor;
+  box-shadow: 0 4px 4px $headerBoxShadowColor;
+
+  .rootLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+
+    h1 {
+      margin-left: 10px;
+      font-size: 24px;
+    }
+  }
+}

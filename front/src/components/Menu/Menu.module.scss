@@ -1,0 +1,28 @@
+@import "src/globals/styles/colors";
+
+.root {
+  padding-right: 14px;
+  margin-top: 36px;
+  margin-left: 100px;
+  width: 130px;
+  box-sizing: border-box;
+
+  .link {
+    display: block;
+    margin-bottom: 6px;
+    padding-left: 4px;
+    line-height: 20px;
+    border-left: 2px solid transparent;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      border-left-color: $menuLinkHoverBorderColor;
+    }
+
+    &.activeLink {
+      font-weight: 500;
+      border-left-color: $menuLinkActiveBorderColor;
+    }
+  }
+}
