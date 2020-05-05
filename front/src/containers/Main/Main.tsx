@@ -3,6 +3,6 @@ import { PageHeader } from "../../components/PageHeader/PageHeader";
 
 export const Main = () => (
   <>
-    <PageHeader>Информация</PageHeader>
+    <PageHeader>Правила ДП Клевер</PageHeader>
   </>
 );

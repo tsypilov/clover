@@ -1,4 +1,5 @@
 @import "src/globals/styles/colors";
+@import "src/globals/styles/mixins";
 
 .root {
   display: flex;
@@ -9,14 +10,24 @@
     background: $wrapperBackground;
     display: flex;
     flex: 1;
+    position: relative;
 
     .container {
-      margin-right: 210px;
-      padding: 32px 40px;
+      padding: 8px 28px;
       background: $whiteColor;
       display: flex;
       flex: 1;
       flex-direction: column;
+
+      @media #{$s} {
+        padding: 16px 28px;
+        margin-right: 110px;
+      }
+
+      @media #{$m} {
+        padding: 32px 40px;
+        margin-right: 210px;
+      }
     }
   }
 }

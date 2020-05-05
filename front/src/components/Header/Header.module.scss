@@ -1,14 +1,24 @@
 @import "src/globals/styles/colors";
+@import "src/globals/styles/mixins";
 
 .root {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 230px;
+  padding: 0 4px;
   height: 50px;
+  z-index: 5;
   background: $whiteColor;
-  box-shadow: 0 4px 4px $headerBoxShadowColor;
+  box-shadow: 0 4px 4px $boxShadowColor;
+
+  @media #{$s} {
+    padding: 0 130px;
+  }
+
+  @media #{$m} {
+    padding: 0 230px;
+  }
 
   .rootLink {
     display: flex;

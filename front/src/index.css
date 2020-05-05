@@ -21,6 +21,7 @@ h1 {
 
 html, body {
   height: 100%;
+  min-width: 320px;
 }
 
 #root {

@@ -1,11 +1,27 @@
 @import "src/globals/styles/colors";
+@import "src/globals/styles/mixins";
 
 .root {
   padding-right: 14px;
-  margin-top: 36px;
-  margin-left: 100px;
   width: 130px;
   box-sizing: border-box;
+
+  @media #{$s} {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+
+  @media #{$m} {
+    margin-left: 100px;
+    margin-top: 36px;
+  }
+
+  &.mobile {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0;
+    padding-left: 10px;
+  }
 
   .link {
     display: block;
@@ -25,4 +41,25 @@
       border-left-color: $menuLinkActiveBorderColor;
     }
   }
+}
+
+.burger {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 9px;
+  padding: 0;
+  margin-left: 8px;
+  color: $mainColor;
+  font-size: 16px;
+}
+
+.mobileMenuList {
+  background: $whiteColor;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  box-shadow: 4px 0px 4px $boxShadowColor;
 }
