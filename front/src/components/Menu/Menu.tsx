@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import Media from "react-media";
 import Foco from "react-foco/lib";
 import cn from "classnames";
+import { DESKTOP_SIZE } from "../../globals/constants";
 
 const LOCATIONS: LocationType[] = [
   { to: root, name: "Главная" },
@@ -44,8 +45,6 @@ const MobileMenu: FC = () => {
   );
 };
 
-const Menu: FC = () => (
-  <Media query={"(min-width: 768px)"}>{(matches) => (matches ? <MenuList /> : <MobileMenu />)}</Media>
-);
+const Menu: FC = () => <Media query={DESKTOP_SIZE}>{(matches) => (matches ? <MenuList /> : <MobileMenu />)}</Media>;
 
 export default withRouter(Menu);
